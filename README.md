@@ -52,4 +52,4 @@ Une séance de défense du projet en présentiel pourrait être organisée juste
 date de dépôt du rapport du projet.
 Bon Travail !
 
-#CT Guelore KABEMBA
+<strong>CT Guelore KABEMBA</strong>

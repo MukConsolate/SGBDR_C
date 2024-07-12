@@ -11,7 +11,7 @@ Le SGBDR doit prendre en charge les fonctionnalités de base suivantes :
 
 -Définition des tables et des champs : Permettre à l'utilisateur de créer des tables avec des champs de types simples (entier, chaîne de caractères, etc.).<br>
 -Insertion de données : Insérer des données dans les tables créées. <br>
--Sélection de données : Sélectionner des données spécifiques d'une table en utilisant des conditions simples (égalité, supériorité, infériorité, etc.). \t
+-Sélection de données : Sélectionner des données spécifiques d'une table en utilisant des conditions simples (égalité, supériorité, infériorité, etc.). <br>
 -Affichage des données : Afficher les données sélectionnées de manière formatée. <br>
 -Suppression de données : Supprimer des données d'une table en fonction de conditions spécifiques. <br>
 -Mise à jour des données : Mettre à jour des données existantes dans une table. <br>

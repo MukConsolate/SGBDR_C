@@ -9,19 +9,19 @@ Le travail est à faire par groupe de 3 étudiants au maximum.
 Description :
 Le SGBDR doit prendre en charge les fonctionnalités de base suivantes :
 
--Définition des tables et des champs : Permettre à l'utilisateur de créer des tables avec des champs de types simples (entier, chaîne de caractères, etc.).
--Insertion de données : Insérer des données dans les tables créées.
--Sélection de données : Sélectionner des données spécifiques d'une table en utilisant des conditions simples (égalité, supériorité, infériorité, etc.).
--Affichage des données : Afficher les données sélectionnées de manière formatée.
--Suppression de données : Supprimer des données d'une table en fonction de conditions spécifiques.
--Mise à jour des données : Mettre à jour des données existantes dans une table.
+-Définition des tables et des champs : Permettre à l'utilisateur de créer des tables avec des champs de types simples (entier, chaîne de caractères, etc.).\t
+-Insertion de données : Insérer des données dans les tables créées. \t
+-Sélection de données : Sélectionner des données spécifiques d'une table en utilisant des conditions simples (égalité, supériorité, infériorité, etc.). \t
+-Affichage des données : Afficher les données sélectionnées de manière formatée. \t
+-Suppression de données : Supprimer des données d'une table en fonction de conditions spécifiques. \t
+-Mise à jour des données : Mettre à jour des données existantes dans une table. \t
 
 # NB : Toutes les instructions / commandes de création et interaction avec la base de données doivent être en français.
 
 # Fonctionnalités optionnelles :
 
--Tri des données : Trier les données sélectionnées selon un ou plusieurs champs.
--Jointure de tables : Joindre des données de plusieurs tables en fonction de relations définies.
+-Tri des données : Trier les données sélectionnées selon un ou plusieurs champs. \t
+-Jointure de tables : Joindre des données de plusieurs tables en fonction de relations définies. \t
 
 # Implémentation :
 

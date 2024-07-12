@@ -16,7 +16,7 @@ Description :
 -<strong>Suppression de données </strong>: Supprimer des données d'une table en fonction de conditions spécifiques. <br>
 -<strong>Mise à jour des données </strong>: Mettre à jour des données existantes dans une table. <br>
 
-# NB : Toutes les instructions / commandes de création et interaction avec la base de données doivent être en français.
+## NB : Toutes les instructions / commandes de création et interaction avec la base de données doivent être en français.
 
 # Fonctionnalités optionnelles :
 

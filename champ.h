@@ -8,7 +8,7 @@
 typedef struct _champ CHAMP; 
 struct  _champ
 {
- 
+    char nom[50];
 
 };
 

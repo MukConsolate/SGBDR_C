@@ -17,7 +17,7 @@ struct _enregistrement
 typedef struct _table Table; 
 struct  _table
 {
-   Champ attribut [];
+   Champ attribut[];
    Enregistrement ligne[];
 
 };

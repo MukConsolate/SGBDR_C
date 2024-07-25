@@ -11,13 +11,14 @@
 typedef struct _champ CHAMP; 
 struct  _champ
 {
-
+ 
 
 };
-typedef struct {
+typedef struct _table TABLE;
+struct _table {
     char **champs;
     int nombre_champs;
-} Table;
+} ;
 
 void creer_bdd(const char *nom);
 void creer_table(const char *nom_table, const char *fichier, char **champs, int nombre_champs);

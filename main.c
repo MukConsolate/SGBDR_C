@@ -62,8 +62,6 @@ void inserer_donnees(char *nom_bdd, char *nom_table, char *donnees[], int nb_don
     fclose(fichier_table);
 }
 
-//, char *donnees[]
-
 void charger_ligne_donnees_en_memoire(char *nom_bdd, char *nom_table, int num_ligne) {
     FILE *fichier_table = NULL;
     char chemin[255];

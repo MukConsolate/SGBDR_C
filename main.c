@@ -119,10 +119,6 @@ void charger_ligne_donnees_en_memoire(char *nom_bdd, char *nom_table, int num_li
     fclose(fichier_table);
 }
 
-void afficher_donnees(char *donnees) {
-
-}
-
 int main()
 {
     char *champs[] = {"champ1", "champ2", "champ3"};

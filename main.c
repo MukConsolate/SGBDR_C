@@ -1,42 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-void creer_bdd(char *nom_bdd) {
-    int create = mkdir(nom_bdd);
-
-    if(create == 0) {
-        printf("Base de donnees creee : %s\n", nom_bdd);
-    } else {
-        printf("Erreur de creation de cette base de donnees : %s\n", nom_bdd);
-    }
-}
-
-
-void creer_table(char *nom_bdd, char *nom_table, char *champs[], int nb_champs) {
-    FILE *fichier_table = NULL;
-    char chemin[255];
-    creer_chemin(chemin, nom_bdd, nom_table);
-    fichier_table = fopen(chemin, "w");
-
-    if(fichier_table == NULL) {
-        printf("Erreur de creation de la table : %s\n", nom_table);
-    }
-
-    for (int i = 0; i < nb_champs; i++)
-    {
-        fprintf(fichier_table, "%s;", champs[i]);
-    }
-    fprintf(fichier_table, "\n");
-
-    fclose(fichier_table);
-}
-
-void creer_chemin(char *chemin, char *folder, char *file){
-    strcat(chemin, folder);
-    strcat(chemin, "\\");
-    strcat(chemin, file);
-}
+#include "champ.h"
+#include "enregistrement.h"
 
 void inserer_donnees(char *nom_bdd, char *nom_table, char *donnees[], int nb_donnees) {
     FILE *fichier_table = NULL;
@@ -121,17 +87,57 @@ void charger_ligne_donnees_en_memoire(char *nom_bdd, char *nom_table, int num_li
 
 int main()
 {
+    char **nom_bdd;
+    int ligne;
+    char table;
+    char commande[255];
     char *champs[] = {"champ1", "champ2", "champ3"};
     char *enregistrement_1[] = {"oeufs", "2500FC", "Chez Muk"};
-    char *enregistrement_2[] = {"eau", "55000FC", "Chez Kafat"};
-    char *enregistrement_3[] = {"Jus", "75000FC", "Chez Clau"};
-    creer_bdd("muk");
-    creer_table("clau", "resto.txt", champs, 3);
-    inserer_donnees("clau", "resto.txt", enregistrement_1, 3);
-    inserer_donnees("clau", "resto.txt", enregistrement_2, 3);
-    inserer_donnees("clau", "resto.txt", enregistrement_3, 3);
+    while (1) {
+        printf("Entrez une commande en respectant la casse et le terme: \n1.creer_bdd \n2.creer_table \n3.inserer_donnees \n4.selectionner_donnees \n5.afficher_donnees \n6.supprimer_donnees \n7.mettre_a_jour_donnees \n8.trier_donnees \n9.quitter \n Votre commande:");
+        fgets(commande, sizeof(commande), stdin);
 
-    charger_ligne_donnees_en_memoire("clau", "resto.txt", 2);
+        // Supprimer le retour à la ligne de la commande
+        commande[strcspn(commande, "\n")] = '\0';
+
+        if (strcmp(commande, "creer_bdd") == 0) {
+            printf("Saississez le nom de votre base de données: ");
+            scanf("%s",&nom_bdd);
+            creer_bdd(&nom_bdd);
+        } else if (strcmp(commande, "creer_table") == 0) {
+            printf("Saisissez la base de données dans laquelle vous voulez ajouter une table: ");
+            scanf("%c", &nom_bdd);
+            printf ("Saisissez le nom de la table que vous voulez creer dans la base de données %c :",nom_bdd);
+            scanf("%c", &table);
+            creer_table(nom_bdd, "resto.txt", champs, 3);
+
+        } else if (strcmp(commande, "inserer_donnees") == 0) {
+
+            inserer_donnees("clau", "resto.txt", enregistrement_1, 3);
+
+        } else if (strcmp(commande, "selectionner_donnees") == 0){
+            //la selection en utilisant des conditions simples supérieure, inférieure, et egalité
+
+        }else if (strcmp(commande, "charger_ligne_donnees_en_memoire") == 0) {
+
+            charger_ligne_donnees_en_memoire("clau", "resto.txt", 2);
+
+        } else if (strcmp(commande, "afficher_donnees") == 0) {
+            //affichage de menière formater
+        }else if (strcmp(commande, "supprimer_donnees") == 0){
+            printf("Entrez le numéro de la ligne que vous souhaitez supprimer:");
+            scanf("%d",&ligne);
+        }else if (strcmp(commande, "mettre_a_jour_donnees") == 0){
+
+        }else if (strcmp(commande, "trier_donnees") == 0){
+
+        }else if (strcmp(commande, "quitter") == 0) {
+            printf("Programme terminé.\n");
+            break;
+        }else {
+            printf("Commande non reconnue. Veuillez réessayer.\n");
+        }
+    }
 
     return 0;
 }
